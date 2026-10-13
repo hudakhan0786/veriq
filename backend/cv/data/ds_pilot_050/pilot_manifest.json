@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "dataset_id": "DS-PILOT-050",
+  "description": "Schema and ground truth registry for 50 physical FMCG retail pilot packages measured with digital vernier calipers (+/- 0.02mm)",
+  "acceptance_target_mae_mm": 0.30,
+  "records": [
+    {
+      "sku_id": "PILOT-SKU-001",
+      "brand": "Sample Brand Biscuit Carton",
+      "category": "Food & Snacks",
+      "packaging_type": "RECTANGULAR",
+      "caliper_calibrated_marker_mm": 50.0,
+      "ground_truth_pdp_width_mm": 112.0,
+      "ground_truth_pdp_height_mm": 80.0,
+      "ground_truth_pdp_area_cm2": 89.6,
+      "ground_truth_net_qty_font_height_mm": 2.45,
+      "ground_truth_mrp_font_height_mm": 3.20,
+      "image_path": "backend/cv/fixtures/fixture_calibration_aruco.png",
+      "status": "TEMPLATE_SPEC"
+    }
+  ]
+}

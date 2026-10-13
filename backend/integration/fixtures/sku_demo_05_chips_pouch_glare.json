@@ -1,0 +1,33 @@
+{
+  "sku_id": "SKU-DEMO-05",
+  "product_name": "Crispy Potato Chips 90g (Metallic Foil Pouch)",
+  "category": "FOOD_SNACKS",
+  "packaging_type": "FLEXIBLE_POUCH",
+  "demonstration_point": "Harsh specular reflection bloom over Net Quantity statement rejecting at quality gate",
+  "expected_overall_verdict": "UNABLE_TO_VERIFY",
+  "pdp_area_cm2": 210.0,
+  "raw_image_mock": {
+    "filename": "sku_demo_05_chips.jpg",
+    "sha256": "e7b9c5f6a8b0213456789012abcdef0123456789abcdef0123456789abcdef05"
+  },
+  "quality_gate": {
+    "passed": false,
+    "blur_variance": 310.0,
+    "glare_percentage": 6.4,
+    "skew_angle_deg": 2.5,
+    "rejection_reason": "SPECULAR_GLARE: Glare coverage 6.40% exceeds acceptable maximum 3.00%. Tilt camera slightly to avoid direct light reflection."
+  },
+  "calibration": {
+    "method": "ARUCO_4X4_50",
+    "px_to_mm": 12.0,
+    "confidence": 0.98,
+    "reference_bounding_box": [78, 78, 242, 242]
+  },
+  "extracted_entities": {
+    "glare_zone": {
+      "name": "Specular Reflection Bloom",
+      "bounding_box": [450, 920, 620, 1180]
+    }
+  },
+  "expected_violations": []
+}

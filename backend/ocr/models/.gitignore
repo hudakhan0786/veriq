@@ -1,0 +1,8 @@
+# Keep all production OCR neural models and language data for self-contained container deployment
+!*.onnx
+!*.traineddata
+!*.txt
+!*.json
+!*.md
+!.gitignore
+

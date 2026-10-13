@@ -1,0 +1,10 @@
+{
+  "description": "DEMO FIXTURE: Non-compliant package where 1.84 mm font height is below 2.50 mm requirement for 144 cm2 PDP (SKU-DEMO-01 / TS-UNIT-07)",
+  "pdp_area_cm2": 144.0,
+  "measured_font_height_mm": 1.84,
+  "required_font_height_mm": 2.50,
+  "deficit_mm": -0.66,
+  "rule_code": "RULE_06_1_H_NET_QTY_FONT",
+  "citation": "Rule 6(1)(h) read with Table-I, G.S.R. 629(E)",
+  "expected_verdict": "FAIL"
+}

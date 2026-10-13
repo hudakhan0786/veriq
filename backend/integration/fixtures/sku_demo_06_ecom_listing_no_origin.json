@@ -1,0 +1,50 @@
+{
+  "sku_id": "SKU-DEMO-06",
+  "product_name": "Wireless Bluetooth Earbuds (Imported Listing)",
+  "category": "ELECTRONICS_COMMODITY",
+  "packaging_type": "ECOMMERCE_LISTING",
+  "demonstration_point": "Online marketplace single listing missing mandatory Country of Origin declaration under Rule 6(10) / Rule 6(10A)",
+  "expected_overall_verdict": "FAIL",
+  "ecom_source": {
+    "url": "https://marketplace.example.in/dp/B09ABCDEF1",
+    "ingested_via": "TARGETED_LISTING_URL",
+    "mfg_date_present": false,
+    "mfg_date_exempt": true
+  },
+  "extracted_entities": {
+    "product_title": {
+      "text": "AudioTech True Wireless Earbuds Bluetooth 5.3",
+      "bounding_box": [80, 520, 160, 1240]
+    },
+    "importer": {
+      "name": "AudioTech Imports India Pvt Ltd",
+      "bounding_box": [420, 520, 490, 1200]
+    },
+    "importer_name": "AudioTech Imports India Pvt Ltd",
+    "net_quantity": {
+      "magnitude": 1.0,
+      "unit": "unit",
+      "has_banned_unit": false,
+      "bounding_box": [260, 520, 310, 850]
+    },
+    "mrp": {
+      "amount": 1999.0,
+      "currency": "INR",
+      "tax_inclusive": true,
+      "bounding_box": [180, 520, 240, 850]
+    },
+    "missing_country_of_origin": {
+      "field_type": "COUNTRY_OF_ORIGIN",
+      "status": "VIOLATION_MISSING",
+      "bounding_box": [330, 520, 400, 1200]
+    },
+    "country_of_origin": null
+  },
+  "expected_violations": [
+    {
+      "rule_code": "RULE_06_10_ECOMM_MANDATORY_DECLARATIONS",
+      "citation": "Rule 6(10) read with Rule 6(1)(p) and G.S.R. 128(E)",
+      "deficit": "Missing mandatory Country of Origin declaration on e-commerce product listing"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "description": "DEMO FIXTURE: Package with banned non-standard unit 'gms' under Section 11 & Rule 12 (TS-UNIT-01)",
+  "image_id": "img_banned_gms_01",
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "Net Wt: 500 gms",
+      "confidence": 0.985,
+      "language": "en",
+      "polygon": [[100, 200], [400, 200], [400, 250], [100, 250]],
+      "bounding_box": [200, 100, 250, 400]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "MRP Rs. 120.00 (incl. of all taxes)",
+      "confidence": 0.990,
+      "language": "en",
+      "polygon": [[100, 260], [550, 260], [550, 310], [100, 310]],
+      "bounding_box": [260, 100, 310, 550]
+    }
+  ]
+}

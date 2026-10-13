@@ -1,0 +1,12 @@
+{
+  "description": "DEMO FIXTURE: Consumer care declaration missing email address per Rule 6(1)(n) (TS-UNIT-09)",
+  "contact_name": "Customer Care Manager",
+  "phone": "+91-9876543210",
+  "email": null,
+  "address": "Plot 12, Okhla Phase III, New Delhi 110020",
+  "rule_code": "RULE_06_1_N_CONSUMER_CARE",
+  "citation": "Rule 6(1)(n), Legal Metrology (Packaged Commodities) Rules, 2011",
+  "expected_status": "FAIL",
+  "expected_discrepancy": "Missing mandatory consumer care email address"
+}
+

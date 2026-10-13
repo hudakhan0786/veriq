@@ -1,0 +1,8 @@
+{
+  "description": "SYNTHETIC: Rejected frame with motion blur below Laplacian threshold (32.4 < 150)",
+  "blur_variance": 32.40,
+  "glare_percentage": 0.50,
+  "skew_angle_deg": 2.10,
+  "is_valid": false,
+  "rejection_reason": "IMAGE_BLURRED: Laplacian variance 32.40 is below statutory threshold 150.0. Hold device steady and refocus."
+}

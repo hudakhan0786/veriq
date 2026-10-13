@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ComplianceContract",
+  "description": "Deterministic Statutory Compliance Verdict Contract for SIH26034",
+  "type": "object",
+  "required": ["inspection_id", "overall_verdict", "adjudication_required", "evaluations", "epoch_applied", "execution_time_ms"],
+  "properties": {
+    "inspection_id": { "type": "string" },
+    "overall_verdict": {
+      "type": "string",
+      "enum": ["PASS", "FAIL", "REVIEW", "UNABLE_TO_VERIFY"]
+    },
+    "adjudication_required": { "type": "boolean" },
+    "epoch_applied": { "type": "string" },
+    "execution_time_ms": { "type": "integer", "minimum": 0 },
+    "evaluations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule_code", "statutory_reference", "status", "severity", "required_value", "measured_value", "legal_consequence"],
+        "properties": {
+          "rule_code": { "type": "string" },
+          "statutory_reference": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["PASS", "FAIL", "WARNING", "REVIEW", "UNABLE_TO_VERIFY", "NOT_APPLICABLE"]
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["CRITICAL", "MAJOR", "MINOR"]
+          },
+          "required_value": { "type": "string" },
+          "measured_value": { "type": "string" },
+          "discrepancy": { "type": ["string", "null"] },
+          "legal_consequence": { "type": "string" }
+        }
+      }
+    }
+  }
+}

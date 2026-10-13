@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-09-10 22:52:06 IST",
+  "method": "static_ptq_qdq",
+  "onnx_version": "1.22.0",
+  "onnxruntime_version": "1.30.0",
+  "models": {
+    "detector": {
+      "model_role": "text_detection",
+      "canonical_name": "ch_PP-OCRv4_det_int8.onnx",
+      "fp32_source": "ch_PP-OCRv4_det.onnx",
+      "fp32_sha256": "30a86f5731181461d08021402766601e4302a9b9b9666be8aff402696339cdff",
+      "int8_sha256": "e7bf4b26e32f89d02287f9e6141b280a0f93b2e2aecb659862146206ee2f9dd9",
+      "fp32_size_bytes": 4745517,
+      "int8_size_bytes": 4999859,
+      "quant_format": "QDQ",
+      "weight_type": "QInt8",
+      "activation_type": "QInt8",
+      "calibration_samples": 5
+    },
+    "english_recognizer": {
+      "model_role": "english_recognition",
+      "canonical_name": "en_PP-OCRv4_rec_infer_int8.onnx",
+      "fp32_source": "en_PP-OCRv4_rec_infer.onnx",
+      "fp32_sha256": "5ca59a096cf493d5fd5044b9ccc1bdea9229fbcf656bd76040ff80a00201ee16",
+      "int8_sha256": "e2eba942d929e7645cbc1b136cbe5611d4136451691d41fd52fbb3720ec4bf67",
+      "fp32_size_bytes": 7656802,
+      "int8_size_bytes": 7740465,
+      "quant_format": "QDQ",
+      "weight_type": "QInt8",
+      "activation_type": "QUInt8",
+      "calibration_samples": 22
+    },
+    "devanagari_recognizer": {
+      "model_role": "devanagari_recognition",
+      "canonical_name": "devanagari_PP-OCRv4_rec_int8.onnx",
+      "canonical_version": "PP-OCRv3",
+      "provenance_note": "Inherits legacy filename devanagari_PP-OCRv4_rec_int8.onnx, but upstream architecture is Baidu PP-OCRv3 Devanagari (570 classes).",
+      "fp32_source": "devanagari_PP-OCRv4_rec.onnx",
+      "fp32_sha256": "2e895a63a7e08932c8b7b65d8bdb87f96b6f075a80c329ab98298ea0915ebf85",
+      "int8_sha256": "846705cddacbc1530d4a3a38805309ac2d1a162452ecd6237f87e6ea440ca590",
+      "fp32_size_bytes": 7935595,
+      "int8_size_bytes": 3094838,
+      "quant_format": "QDQ",
+      "weight_type": "QInt8",
+      "activation_type": "QUInt8",
+      "calibration_samples": 4
+    }
+  }
+}

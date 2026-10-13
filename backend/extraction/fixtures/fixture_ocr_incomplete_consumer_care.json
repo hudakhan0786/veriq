@@ -1,0 +1,30 @@
+{
+  "description": "DEMO FIXTURE: Consumer care declaration missing mandatory email address under Rule 6(1)(n) (TS-UNIT-09)",
+  "image_id": "img_incomplete_care_04",
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "For Consumer Complaints contact: Executive, Customer Care",
+      "confidence": 0.965,
+      "language": "en",
+      "polygon": [[100, 200], [800, 200], [800, 240], [100, 240]],
+      "bounding_box": [200, 100, 240, 800]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "Address: Plot 12, Phase 1, Okhla, New Delhi 110020",
+      "confidence": 0.970,
+      "language": "en",
+      "polygon": [[100, 250], [750, 250], [750, 290], [100, 290]],
+      "bounding_box": [250, 100, 290, 750]
+    },
+    {
+      "token_id": "tok_03",
+      "text": "Tel: 1800-123-4567",
+      "confidence": 0.985,
+      "language": "en",
+      "polygon": [[100, 300], [400, 300], [400, 340], [100, 340]],
+      "bounding_box": [300, 100, 340, 400]
+    }
+  ]
+}

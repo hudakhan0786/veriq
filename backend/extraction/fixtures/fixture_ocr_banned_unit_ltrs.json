@@ -1,0 +1,34 @@
+{
+  "description": "DEMO FIXTURE: Packaged commodity with banned units 'ltrs' and 'Kgs' under Section 11 & Rule 12 (TS-UNIT-01)",
+  "image_id": "img_banned_ltrs_07",
+  "total_tokens": 3,
+  "mean_confidence": 0.982,
+  "execution_time_ms": 35,
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "Net Volume: 2 ltrs",
+      "confidence": 0.985,
+      "language": "en",
+      "polygon": [[100, 100], [380, 100], [380, 140], [100, 140]],
+      "bounding_box": [100, 100, 140, 380]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "Gross Weight: 2.2 Kgs",
+      "confidence": 0.980,
+      "language": "en",
+      "polygon": [[100, 150], [420, 150], [420, 190], [100, 190]],
+      "bounding_box": [150, 100, 190, 420]
+    },
+    {
+      "token_id": "tok_03",
+      "text": "MRP Rs. 240.00 (incl. of all taxes)",
+      "confidence": 0.990,
+      "language": "en",
+      "polygon": [[100, 200], [560, 200], [560, 240], [100, 240]],
+      "bounding_box": [200, 100, 240, 560]
+    }
+  ],
+  "full_text": "Net Volume: 2 ltrs\nGross Weight: 2.2 Kgs\nMRP Rs. 240.00 (incl. of all taxes)"
+}

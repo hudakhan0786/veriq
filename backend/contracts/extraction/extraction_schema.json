@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ExtractionContract",
+  "description": "Normalized Statutory Packaging Facts Contract for SIH26034",
+  "type": "object",
+  "required": ["image_id", "raw_fields"],
+  "properties": {
+    "image_id": { "type": "string" },
+    "net_quantity": {
+      "type": "object",
+      "required": ["magnitude", "unit", "has_banned_unit"],
+      "properties": {
+        "magnitude": { "type": "number", "exclusiveMinimum": 0.0 },
+        "unit": { "type": "string" },
+        "has_banned_unit": { "type": "boolean" },
+        "banned_unit_found": { "type": ["string", "null"] }
+      }
+    },
+    "mrp": {
+      "type": "object",
+      "required": ["amount", "currency", "tax_inclusive"],
+      "properties": {
+        "amount": { "type": "number", "exclusiveMinimum": 0.0 },
+        "currency": { "type": "string" },
+        "tax_inclusive": { "type": "boolean" }
+      }
+    },
+    "unit_sale_price": {
+      "type": "object",
+      "required": ["price_per_unit", "unit"],
+      "properties": {
+        "price_per_unit": { "type": "number", "exclusiveMinimum": 0.0 },
+        "unit": { "type": "string" }
+      }
+    },
+    "manufacturer": {
+      "type": "object",
+      "properties": {
+        "name": { "type": ["string", "null"] },
+        "address_line": { "type": ["string", "null"] },
+        "state": { "type": ["string", "null"] },
+        "pin_code": { "type": ["string", "null"] },
+        "is_complete": { "type": "boolean" }
+      }
+    },
+    "consumer_care": {
+      "type": "object",
+      "properties": {
+        "contact_name": { "type": ["string", "null"] },
+        "phone": { "type": ["string", "null"] },
+        "email": { "type": ["string", "null"] },
+        "address": { "type": ["string", "null"] },
+        "is_complete": { "type": "boolean" }
+      }
+    },
+    "country_of_origin": { "type": ["string", "null"] },
+    "mfg_date_month": { "type": ["integer", "null"], "minimum": 1, "maximum": 12 },
+    "mfg_date_year": { "type": ["integer", "null"], "minimum": 2000, "maximum": 2030 },
+    "raw_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field_type", "raw_ocr_text", "detection_confidence", "ocr_confidence", "bounding_box"],
+        "properties": {
+          "field_type": { "type": "string" },
+          "raw_ocr_text": { "type": "string" },
+          "normalized_value": { "type": "object" },
+          "detection_confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "ocr_confidence": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+          "bounding_box": {
+            "type": "array",
+            "items": { "type": "integer" },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "measured_font_height_mm": { "type": ["number", "null"] },
+          "measurement_confidence": { "type": ["number", "null"] }
+        }
+      }
+    }
+  }
+}

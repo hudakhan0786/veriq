@@ -1,0 +1,63 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+<defs>
+  <linearGradient id="oilBg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#3b2d18"/><stop offset="1" stop-color="#1c160c"/></linearGradient>
+  <linearGradient id="oilPack" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#fef08a"/><stop offset=".15" stop-color="#fef9c3"/><stop offset=".85" stop-color="#fef08a"/><stop offset="1" stop-color="#eab308"/></linearGradient>
+  <filter id="oilShadow"><feDropShadow dx="0" dy="18" stdDeviation="16" flood-opacity=".35"/></filter>
+</defs>
+<rect width="900" height="1100" fill="url(#oilBg)"/>
+<!-- Calibrated Reference Grid -->
+<g opacity=".12" stroke="#fff" stroke-width="4">
+  <path d="M0 170h900M0 340h900M0 510h900M0 680h900M0 850h900"/>
+  <path d="M150 0v1100M300 0v1100M450 0v1100M600 0v1100M750 0v1100"/>
+</g>
+<!-- ArUco 4x4 50mm Calibration Fiducial Marker on left edge -->
+<g transform="translate(40 80)">
+  <rect width="100" height="100" fill="#fff" stroke="#111" stroke-width="3"/>
+  <rect x="15" y="15" width="70" height="70" fill="#000"/>
+  <!-- ArUco internal bits pattern (ID 2) -->
+  <rect x="25" y="25" width="15" height="15" fill="#fff"/>
+  <rect x="40" y="25" width="15" height="15" fill="#fff"/>
+  <rect x="55" y="40" width="15" height="15" fill="#fff"/>
+  <rect x="25" y="55" width="15" height="15" fill="#fff"/>
+  <text x="50" y="112" font-family="monospace" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">ArUco 50mm</text>
+</g>
+<!-- Packaging Pouch Body -->
+<g filter="url(#oilShadow)">
+  <path d="M180 70 Q450 45 720 70 L755 1010 Q450 1060 145 1010Z" fill="url(#oilPack)" stroke="#ca8a04" stroke-width="6"/>
+  <path d="M180 70 Q450 45 720 70" fill="none" stroke="#a16207" stroke-width="16"/>
+  <path d="M145 1010 Q450 1060 755 1010" fill="none" stroke="#854d0e" stroke-width="18"/>
+</g>
+<g font-family="Arial, sans-serif" text-anchor="middle">
+  <!-- Brand Header -->
+  <text x="450" y="195" font-size="46" font-weight="900" fill="#b45309" letter-spacing="2">FORTUNE</text>
+  <text x="450" y="240" font-size="28" font-weight="800" fill="#ca8a04" letter-spacing="1">SUNLITE</text>
+  <text x="450" y="320" font-size="34" font-weight="900" fill="#78350f">REFINED SUNFLOWER OIL</text>
+  
+  <!-- Sunflower Graphic Emblem -->
+  <circle cx="450" cy="460" r="85" fill="#fde047" stroke="#ca8a04" stroke-width="6"/>
+  <circle cx="450" cy="460" r="45" fill="#854d0e"/>
+  <text x="450" y="468" font-size="22" font-weight="900" fill="#fef08a">100%</text>
+  <text x="450" y="500" font-size="14" font-weight="700" fill="#78350f">REFINED OIL</text>
+
+  <!-- Net Quantity Box -->
+  <g transform="translate(290 580)">
+    <rect width="320" height="110" rx="12" fill="#854d0e"/>
+    <text x="160" y="45" font-size="18" font-weight="700" fill="#fef08a">NET QUANTITY</text>
+    <text x="160" y="92" font-size="40" font-weight="900" fill="#fff">1 L (910 g)</text>
+  </g>
+
+  <!-- Statutory MRP Box -->
+  <g transform="translate(300 730)">
+    <rect width="300" height="95" rx="10" fill="#fff" stroke="#ca8a04" stroke-width="3"/>
+    <text x="150" y="36" font-size="17" font-weight="700" fill="#854d0e">MAXIMUM RETAIL PRICE</text>
+    <text x="150" y="74" font-size="34" font-weight="900" fill="#1e293b">₹ 145.00</text>
+  </g>
+  <text x="450" y="855" font-size="17" font-weight="bold" fill="#854d0e">(INCL. OF ALL TAXES)</text>
+  <text x="450" y="885" font-size="15" font-family="monospace" font-weight="bold" fill="#475569">Unit Sale Price: ₹ 145.00 / L</text>
+
+  <!-- Manufacturer Details -->
+  <text x="450" y="930" font-size="14" font-weight="bold" fill="#1e293b">Mfg by: Adani Wilmar Limited, Fortune House, Ahmedabad 380009</text>
+  <text x="450" y="955" font-size="13" fill="#475569">Consumer Care: 1800-233-9999 • customercare@adaniwilmar.in</text>
+  <text x="450" y="980" font-size="12" font-family="monospace" fill="#64748b">Batch: AWL26S09 • Pkd: 08/2026</text>
+</g>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "description": "DEMO FIXTURE: Package with Unit Sale Price arithmetic mismatch (400g @ Rs. 200 declared USP 0.60/g => calc 0.50/g deficit Rs. 40) (TS-UNIT-05)",
+  "net_quantity_magnitude": 400.0,
+  "net_quantity_unit": "g",
+  "mrp_amount": 200.0,
+  "declared_usp": 0.60,
+  "calculated_usp": 0.50,
+  "absolute_discrepancy": 40.0,
+  "tolerance": 0.02,
+  "rule_code": "RULE_06_1_K_USP_COMPUTATION",
+  "citation": "Rule 6(1)(k), G.S.R. 779(E)",
+  "expected_verdict": "FAIL"
+}

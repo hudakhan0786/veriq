@@ -1,0 +1,8 @@
+{
+  "description": "SYNTHETIC: Valid clear packaging frame passing all optical quality criteria",
+  "blur_variance": 342.18,
+  "glare_percentage": 0.84,
+  "skew_angle_deg": 1.45,
+  "is_valid": true,
+  "rejection_reason": null
+}

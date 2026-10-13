@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EvidenceContract",
+  "description": "Section 63 BSA 2023 Electronic Evidence Certificate & Merkle DAG Contract for SIH26034",
+  "type": "object",
+  "required": ["inspection_id", "raw_image_sha256", "merkle_nodes", "merkle_root", "bsa_certificate"],
+  "properties": {
+    "inspection_id": { "type": "string" },
+    "raw_image_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "merkle_root": { "type": "string", "minLength": 64, "maxLength": 64 },
+    "merkle_nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage_name", "payload_sha256", "timestamp_utc"],
+        "properties": {
+          "stage_name": { "type": "string" },
+          "payload_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+          "timestamp_utc": { "type": "string" },
+          "metadata": { "type": "object" }
+        }
+      }
+    },
+    "bsa_certificate": {
+      "type": "object",
+      "required": [
+        "certificate_number", "inspection_id", "statutory_law_ref",
+        "device_model", "operating_system", "clock_source",
+        "raw_images_merkle_root", "evidence_bundle_sha256",
+        "issuing_officer_id", "issuing_officer_name", "officer_signature_token", "generated_at"
+      ],
+      "properties": {
+        "certificate_number": { "type": "string" },
+        "inspection_id": { "type": "string" },
+        "statutory_law_ref": { "type": "string" },
+        "device_model": { "type": "string" },
+        "operating_system": { "type": "string" },
+        "clock_source": {
+          "type": "string",
+          "enum": ["LOCAL_DEVICE_MONOTONIC", "NTP_SYNCHRONIZED", "MANUAL_DECLARED"]
+        },
+        "raw_images_merkle_root": { "type": "string", "minLength": 64, "maxLength": 64 },
+        "evidence_bundle_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+        "issuing_officer_id": { "type": "string" },
+        "issuing_officer_name": { "type": "string" },
+        "officer_signature_token": { "type": "string" },
+        "generated_at": { "type": "string" }
+      }
+    }
+  }
+}

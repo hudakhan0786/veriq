@@ -1,0 +1,5 @@
+# Member 1 Dependencies (Strictly Permissive: Apache-2.0 / BSD / MIT)
+opencv-python-headless>=4.9.0
+numpy>=1.26.0
+pydantic>=2.6.0
+pytest>=8.0.0

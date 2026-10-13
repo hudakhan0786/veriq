@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "manifest_version": "1.0.0",
+  "system": "Nirikshak (SIH26034)",
+  "subsystem": "Stage 6 & 7 Multilingual OCR (Member 2)",
+  "canonical_architecture": {
+    "detection": "DBNet++ / PP-OCRv4 detection",
+    "english_recognition": "PP-OCRv4 English recognition",
+    "devanagari_recognition": "PP-OCRv3 Devanagari recognition",
+    "fallback": "Tesseract v5"
+  },
+  "models": {
+    "detection": {
+      "role": "text_detection",
+      "identity": "DBNet++ / PP-OCRv4 detection",
+      "canonical_model_version": "PP-OCRv4",
+      "local_filename": "ch_PP-OCRv4_det.onnx",
+      "source": "https://huggingface.co/Heliosoph/paddleocr-v4-det-onnx/resolve/main/ch_PP-OCRv4_det.onnx",
+      "upstream": "https://paddleocr.bj.bcebos.com/PP-OCRv4/chinese/ch_PP-OCRv4_det_infer.tar (Baidu Inc.)",
+      "architecture": "DBNet++ with MobileNetV3 / ResNet backbone",
+      "input_shape": "[1, 3, H, W]",
+      "output_shape": "[1, 1, H, W]",
+      "license": "Apache-2.0",
+      "sha256": "30a86f5731181461d08021402766601e4302a9b9b9666be8aff402696339cdff",
+      "size_bytes": 4745517
+    },
+    "english_recognition": {
+      "role": "english_recognition",
+      "identity": "PP-OCRv4 English recognition",
+      "canonical_model_version": "PP-OCRv4",
+      "local_filename": "en_PP-OCRv4_rec_infer.onnx",
+      "vocabulary_file": "en_dict.txt",
+      "source": "https://huggingface.co/breezedeus/cnocr-ppocr-en_PP-OCRv4/resolve/main/en_PP-OCRv4_rec_infer.onnx",
+      "upstream": "https://paddleocr.bj.bcebos.com/PP-OCRv4/english/en_PP-OCRv4_rec_infer.tar (Baidu Inc.)",
+      "architecture": "SVTR-LCNet with Latin CTC Head",
+      "input_shape": "[batch, 3, 48, W]",
+      "output_shape": "[batch, time_steps, 97]",
+      "license": "Apache-2.0",
+      "sha256": "5ca59a096cf493d5fd5044b9ccc1bdea9229fbcf656bd76040ff80a00201ee16",
+      "size_bytes": 7656802
+    },
+    "devanagari_recognition": {
+      "role": "devanagari_recognition",
+      "identity": "PP-OCRv3 Devanagari recognition",
+      "canonical_model_version": "PP-OCRv3",
+      "local_filename": "devanagari_PP-OCRv4_rec.onnx",
+      "vocabulary_file": "devanagari_dict.txt",
+      "source": "https://huggingface.co/xberg-io/paddleocr-onnx-models/resolve/main/rec/devanagari/model.onnx",
+      "upstream": "https://paddleocr.bj.bcebos.com/PP-OCRv3/multilingual/devanagari_PP-OCRv3_rec_infer.tar (Baidu Inc.)",
+      "architecture": "SVTR-LCNet with Devanagari CTC Head",
+      "input_shape": "[batch, 3, 48, W]",
+      "output_shape": "[batch, time_steps, 570]",
+      "license": "Apache-2.0",
+      "sha256": "2e895a63a7e08932c8b7b65d8bdb87f96b6f075a80c329ab98298ea0915ebf85",
+      "size_bytes": 7935595,
+      "reason": "The local filename is inherited from the downstream ONNX model artifact distribution and does not establish the upstream model version. Upstream PaddleOCR never released a PP-OCRv4 Devanagari architecture; the underlying model is officially devanagari_PP-OCRv3_rec."
+    },
+    "ocr_fallback": {
+      "role": "ocr_fallback",
+      "identity": "Tesseract",
+      "canonical_model_version": "Tesseract v5.5.0",
+      "source": "https://github.com/tesseract-ocr/tessdata_fast",
+      "license": "Apache-2.0",
+      "components": {
+        "eng_traineddata": {
+          "local_filename": "eng.traineddata",
+          "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+          "license": "Apache-2.0"
+        },
+        "hin_traineddata": {
+          "local_filename": "hin.traineddata",
+          "sha256": "4c73ffc59d497c186b19d1e90f5d721d678ea6b2e277b719bee4e2af12271825",
+          "license": "Apache-2.0"
+        }
+      }
+    }
+  }
+}

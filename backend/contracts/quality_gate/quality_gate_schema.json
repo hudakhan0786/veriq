@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QualityGateContract",
+  "description": "Optical Quality Gate contract for SIH26034 Nirikshak",
+  "type": "object",
+  "required": ["passed", "blur_variance", "glare_percentage", "skew_angle_deg"],
+  "properties": {
+    "passed": {
+      "type": "boolean",
+      "description": "True if blur_variance >= 150, glare_percentage <= 3.0, and skew_angle_deg <= 15.0"
+    },
+    "blur_variance": {
+      "type": "number",
+      "minimum": 0.0,
+      "description": "Laplacian variance"
+    },
+    "glare_percentage": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 100.0,
+      "description": "Specular glare pixel percentage"
+    },
+    "skew_angle_deg": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 90.0,
+      "description": "Perspective skew angle in degrees"
+    },
+    "advice": {
+      "type": ["string", "null"],
+      "description": "Guidance instruction for recapture"
+    }
+  }
+}

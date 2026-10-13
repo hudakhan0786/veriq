@@ -1,0 +1,12 @@
+# Member 2 Dependencies (Permissive Only: Apache-2.0 / BSD / MIT)
+# AGPL-3.0 models (e.g. Ultralytics YOLO) are strictly prohibited per ADR-03
+onnxruntime>=1.17.0
+onnx>=1.16.0
+numpy>=1.26.0
+pillow>=10.2.0
+shapely>=2.0.0
+pyclipper>=1.3.0
+pydantic>=2.6.0
+pytesseract>=0.3.10
+opencv-python>=4.8.0
+pytest>=8.0.0

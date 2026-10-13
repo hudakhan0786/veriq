@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UIRESTAPIContract",
+  "description": "External REST API Schemas for Web Frontend and Mobile HUD (SIH26034 - Nirikshak)",
+  "type": "object",
+  "definitions": {
+    "LoginRequest": {
+      "type": "object",
+      "required": ["username", "password"],
+      "properties": {
+        "username": { "type": "string" },
+        "password": { "type": "string" }
+      }
+    },
+    "LoginResponse": {
+      "type": "object",
+      "required": ["access_token", "token_type", "user_id", "role", "full_name", "jurisdiction_id"],
+      "properties": {
+        "access_token": { "type": "string" },
+        "token_type": { "type": "string", "enum": ["Bearer"] },
+        "user_id": { "type": "string" },
+        "role": { "type": "string", "enum": ["ADMIN", "CONTROLLER", "INSPECTOR", "VIEWER"] },
+        "full_name": { "type": "string" },
+        "jurisdiction_id": { "type": "string" }
+      }
+    },
+    "InspectionUploadResponse": {
+      "type": "object",
+      "required": ["status", "inspection_id", "image_id", "raw_sha256", "quality_gate", "message"],
+      "properties": {
+        "status": { "type": "string", "enum": ["SUCCESS", "FAILED_QUALITY_GATE"] },
+        "inspection_id": { "type": "string" },
+        "image_id": { "type": "string" },
+        "raw_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+        "quality_gate": {
+          "type": "object",
+          "required": ["passed", "blur_variance", "glare_percentage", "skew_angle_deg"],
+          "properties": {
+            "passed": { "type": "boolean" },
+            "blur_variance": { "type": "number" },
+            "glare_percentage": { "type": "number" },
+            "skew_angle_deg": { "type": "number" }
+          }
+        },
+        "message": { "type": "string" }
+      }
+    },
+    "PipelineExecutionResponse": {
+      "type": "object",
+      "required": ["inspection_id", "execution_time_ms", "calibration", "principal_display_panel", "extracted_fields", "rule_evaluations", "ai_verdict", "adjudication_required"],
+      "properties": {
+        "inspection_id": { "type": "string" },
+        "execution_time_ms": { "type": "integer" },
+        "calibration": { "type": "object" },
+        "principal_display_panel": { "type": "object" },
+        "extracted_fields": { "type": "array" },
+        "rule_evaluations": { "type": "array" },
+        "ai_verdict": { "type": "string", "enum": ["PASS", "FAIL", "REVIEW", "UNABLE_TO_VERIFY"] },
+        "adjudication_required": { "type": "boolean" }
+      }
+    },
+    "AdjudicationRequest": {
+      "type": "object",
+      "required": ["adjudication_verdict", "override_applied", "officer_remarks", "action_order", "officer_pin_hash"],
+      "properties": {
+        "adjudication_verdict": { "type": "string", "enum": ["CONFIRM_VIOLATION", "DISMISS_VIOLATION", "SCHEDULE_HEARING"] },
+        "override_applied": { "type": "boolean" },
+        "officer_remarks": { "type": "string" },
+        "action_order": { "type": "string", "enum": ["GENERATE_LEGAL_NOTICE_FORM_1", "CLOSE_INSPECTION_COMPLIANT", "REQUEST_PHYSICAL_CALIPER_CHECK"] },
+        "officer_pin_hash": { "type": "string" }
+      }
+    },
+    "DashboardSummaryResponse": {
+      "type": "object",
+      "required": ["total_inspections", "compliance_rate_pct", "violations_by_rule", "active_circle", "recent_inspections"],
+      "properties": {
+        "total_inspections": { "type": "integer" },
+        "compliance_rate_pct": { "type": "number" },
+        "violations_by_rule": { "type": "object" },
+        "active_circle": { "type": "string" },
+        "recent_inspections": { "type": "array" }
+      }
+    }
+  }
+}

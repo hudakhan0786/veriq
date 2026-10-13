@@ -1,0 +1,69 @@
+{
+  "sku_id": "SKU-DEMO-02",
+  "product_name": "Ready-to-Eat Dal Makhani 300g",
+  "category": "FOOD_SNACKS",
+  "packaging_type": "FLEXIBLE_POUCH",
+  "demonstration_point": "USP mathematical mismatch + Incomplete Consumer Care (missing email)",
+  "expected_overall_verdict": "FAIL",
+  "pdp_area_cm2": 160.0,
+  "raw_image_mock": {
+    "filename": "sku_demo_02_curry.jpg",
+    "sha256": "b4e6f2c3d5e7980123456789abcdef0123456789abcdef0123456789abcdef02"
+  },
+  "quality_gate": {
+    "passed": true,
+    "blur_variance": 280.0,
+    "glare_percentage": 1.4,
+    "skew_angle_deg": 2.1
+  },
+  "calibration": {
+    "method": "ARUCO_4X4_50",
+    "px_to_mm": 12.10,
+    "confidence": 0.98,
+    "reference_bounding_box": [78, 78, 242, 242]
+  },
+  "extracted_entities": {
+    "brand_name": {
+      "text": "Kitchens of India Dal Makhani",
+      "bounding_box": [130, 780, 260, 1320]
+    },
+    "net_quantity": {
+      "magnitude": 300.0,
+      "unit": "g",
+      "has_banned_unit": false,
+      "bounding_box": [720, 780, 780, 1050]
+    },
+    "mrp": {
+      "amount": 120.0,
+      "currency": "INR",
+      "tax_inclusive": true,
+      "bounding_box": [790, 780, 835, 1320]
+    },
+    "declared_usp": 0.55,
+    "declared_usp_entity": {
+      "price_per_unit": 0.55,
+      "unit": "g",
+      "bounding_box": [835, 780, 870, 1320]
+    },
+    "measured_font_height_mm": 2.65,
+    "consumer_care": {
+      "has_email": false,
+      "has_phone": true,
+      "has_address": true,
+      "is_complete": false,
+      "bounding_box": [870, 780, 960, 1320]
+    }
+  },
+  "expected_violations": [
+    {
+      "rule_code": "RULE_06_1_K_USP_COMPUTATION",
+      "citation": "Rule 6(1)(k), G.S.R. 779(E)",
+      "deficit": "USP mismatch: 300g * Rs 0.55/g = Rs 165.00 != declared MRP Rs 120.00 (Discrepancy Rs 45.00)"
+    },
+    {
+      "rule_code": "RULE_06_1_N_CONSUMER_CARE",
+      "citation": "Rule 6(1)(n) LMPC Rules 2011",
+      "deficit": "Missing mandatory consumer grievance email address"
+    }
+  ]
+}

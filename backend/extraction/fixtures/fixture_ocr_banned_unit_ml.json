@@ -1,0 +1,22 @@
+{
+  "description": "DEMO FIXTURE: Beverage pack with banned non-standard capitalized unit 'ML' (TS-UNIT-02)",
+  "image_id": "img_banned_ml_02",
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "Volume: 750 ML",
+      "confidence": 0.982,
+      "language": "en",
+      "polygon": [[100, 200], [380, 200], [380, 250], [100, 250]],
+      "bounding_box": [200, 100, 250, 380]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "MRP Rs. 45.00 (incl. of all taxes)",
+      "confidence": 0.988,
+      "language": "en",
+      "polygon": [[100, 260], [520, 260], [520, 310], [100, 310]],
+      "bounding_box": [260, 100, 310, 520]
+    }
+  ]
+}

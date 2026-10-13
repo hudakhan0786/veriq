@@ -1,0 +1,15 @@
+{
+  "description": "DEMO FIXTURE: Section 63 BSA 2023 Digital Evidence Certificate for SKU-DEMO-01",
+  "certificate_number": "CERT-BSA2023-20260907-0842",
+  "inspection_id": "insp_8f7b2c14-9d1a-4d2b-a312-c7f3e82d1094",
+  "statutory_law_ref": "Section 63 of Bharatiya Sakshya Adhiniyam, 2023",
+  "device_model": "Samsung Galaxy Tab Active4 Pro",
+  "operating_system": "Android 14 (Kernel 5.15)",
+  "clock_source": "LOCAL_DEVICE_MONOTONIC",
+  "raw_images_merkle_root": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "evidence_bundle_sha256": "8c42b9101adfa9280194bc0281efca891048bca120938a1ef908123bcdef0123",
+  "issuing_officer_id": "INSP-DL-0842",
+  "issuing_officer_name": "Rajesh Sharma",
+  "officer_signature_token": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3",
+  "generated_at": "2026-09-07T11:45:00Z"
+}

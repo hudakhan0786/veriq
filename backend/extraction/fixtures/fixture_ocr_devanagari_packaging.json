@@ -1,0 +1,42 @@
+{
+  "description": "DEMO FIXTURE: Packaged commodity with Hindi Devanagari declarations and numerals (TS-UNIT-01/03)",
+  "image_id": "img_devanagari_pack_06",
+  "total_tokens": 4,
+  "mean_confidence": 0.970,
+  "execution_time_ms": 38,
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "शुद्ध मात्रा: ५०० g",
+      "confidence": 0.980,
+      "language": "hi",
+      "polygon": [[100, 100], [380, 100], [380, 140], [100, 140]],
+      "bounding_box": [100, 100, 140, 380]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "अ.वि.मू. ₹ १२०.०० (कर सहित)",
+      "confidence": 0.985,
+      "language": "hi",
+      "polygon": [[100, 150], [550, 150], [550, 190], [100, 190]],
+      "bounding_box": [150, 100, 190, 550]
+    },
+    {
+      "token_id": "tok_03",
+      "text": "उत्पादन तिथि: ०५/२०२४",
+      "confidence": 0.965,
+      "language": "hi",
+      "polygon": [[100, 200], [450, 200], [450, 240], [100, 240]],
+      "bounding_box": [200, 100, 240, 450]
+    },
+    {
+      "token_id": "tok_04",
+      "text": "Country of Origin: India",
+      "confidence": 0.990,
+      "language": "en",
+      "polygon": [[100, 250], [420, 250], [420, 290], [100, 290]],
+      "bounding_box": [250, 100, 290, 420]
+    }
+  ],
+  "full_text": "शुद्ध मात्रा: ५०० g\nअ.वि.मू. ₹ १२०.०० (कर सहित)\nउत्पादन तिथि: ०५/२०२४\nCountry of Origin: India"
+}

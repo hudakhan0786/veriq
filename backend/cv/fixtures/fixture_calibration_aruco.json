@@ -1,0 +1,18 @@
+{
+  "description": "SYNTHETIC: Valid 50mm ArUco 4x4 marker calibration result resolving 12.45 pixels/mm with rectangular PDP",
+  "is_calibrated": true,
+  "calibration": {
+    "method": "ARUCO_4X4_50",
+    "px_to_mm": 12.45,
+    "confidence": 0.995,
+    "reference_bounding_box": [120, 80, 742, 702],
+    "margin_of_error_pct": 0.85
+  },
+  "principal_display_panel": {
+    "package_type": "RECTANGULAR",
+    "package_area_cm2": 280.0,
+    "pdp_area_cm2": 112.0,
+    "pdp_area_percentage": 40.0,
+    "bounding_box": [120, 80, 1850, 1020]
+  }
+}

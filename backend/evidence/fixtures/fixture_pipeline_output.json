@@ -1,0 +1,59 @@
+{
+  "description": "DEMO FIXTURE: Complete 12-stage pipeline output payload for SKU-DEMO-01 Biscuit Carton",
+  "inspection_id": "insp_8f7b2c14-9d1a-4d2b-a312-c7f3e82d1094",
+  "execution_time_ms": 782,
+  "calibration": {
+    "method": "ARUCO_4X4_50",
+    "px_to_mm": 12.45,
+    "margin_of_error_pct": 1.2
+  },
+  "principal_display_panel": {
+    "package_area_cm2": 280.0,
+    "pdp_area_cm2": 112.0,
+    "pdp_area_percentage": 40.0,
+    "bounding_box": [120, 80, 1850, 1020]
+  },
+  "extracted_fields": [
+    {
+      "field_type": "NET_QUANTITY",
+      "raw_ocr_text": "Net Weight: 150 g",
+      "normalized_value": {
+        "magnitude": 150.0,
+        "unit": "g"
+      },
+      "detection_confidence": 0.984,
+      "ocr_confidence": 0.971,
+      "bounding_box": [820, 210, 880, 540],
+      "measured_font_height_mm": 2.12,
+      "measurement_confidence": 0.94
+    },
+    {
+      "field_type": "MRP",
+      "raw_ocr_text": "MRP Rs. 35.00 (incl. of all taxes)",
+      "normalized_value": {
+        "amount": 35.0,
+        "currency": "INR",
+        "tax_inclusive": true
+      },
+      "detection_confidence": 0.991,
+      "ocr_confidence": 0.985,
+      "bounding_box": [910, 210, 960, 680],
+      "measured_font_height_mm": 3.45,
+      "measurement_confidence": 0.96
+    }
+  ],
+  "rule_evaluations": [
+    {
+      "rule_code": "RULE_06_1_H_NET_QTY_FONT",
+      "statutory_reference": "Rule 6(1)(h) read with Table-I, G.S.R. 629(E)",
+      "status": "FAIL",
+      "severity": "CRITICAL",
+      "required_value": ">= 4.00 mm (PDP area 112 cm2)",
+      "measured_value": "2.12 mm",
+      "discrepancy": "-1.88 mm (-47.0%)",
+      "legal_consequence": "Misbranded / Non-compliant under Section 36(1) LM Act 2009"
+    }
+  ],
+  "ai_verdict": "FAIL",
+  "adjudication_required": true
+}

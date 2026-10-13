@@ -1,0 +1,8 @@
+{
+  "description": "SYNTHETIC: Rejected frame with specular reflection highlight obscuring packaging text (5.8% > 3.0%)",
+  "blur_variance": 280.50,
+  "glare_percentage": 5.80,
+  "skew_angle_deg": 3.20,
+  "is_valid": false,
+  "rejection_reason": "SPECULAR_GLARE: Glare percentage 5.80% exceeds acceptable maximum 3.00%. Tilt camera slightly to avoid direct light reflection."
+}

@@ -1,0 +1,57 @@
+{
+  "sku_id": "SKU-DEMO-01",
+  "product_name": "Premium Butter Cookies 200g",
+  "category": "FOOD_SNACKS",
+  "packaging_type": "RECTANGULAR",
+  "demonstration_point": "Font height deficit (1.84 mm vs 2.50 mm req) + Banned non-standard unit 'gms'",
+  "expected_overall_verdict": "FAIL",
+  "pdp_area_cm2": 144.0,
+  "raw_image_mock": {
+    "filename": "sku_demo_01_biscuit.jpg",
+    "sha256": "a3f5e1b2c4d6879012345678abcdef0123456789abcdef0123456789abcdef01"
+  },
+  "quality_gate": {
+    "passed": true,
+    "blur_variance": 312.4,
+    "glare_percentage": 1.1,
+    "skew_angle_deg": 1.2
+  },
+  "calibration": {
+    "method": "ARUCO_4X4_50",
+    "px_to_mm": 11.85,
+    "confidence": 0.99,
+    "reference_bounding_box": [78, 78, 242, 242]
+  },
+  "extracted_entities": {
+    "brand_name": {
+      "text": "Sunfeast Premium Butter Cookies",
+      "bounding_box": [475, 840, 520, 1300]
+    },
+    "net_quantity": {
+      "magnitude": 200.0,
+      "unit": "gms",
+      "has_banned_unit": true,
+      "banned_unit_found": "gms",
+      "bounding_box": [530, 840, 565, 1050]
+    },
+    "mrp": {
+      "amount": 75.0,
+      "currency": "INR",
+      "tax_inclusive": true,
+      "bounding_box": [570, 840, 605, 1150]
+    },
+    "measured_font_height_mm": 1.84
+  },
+  "expected_violations": [
+    {
+      "rule_code": "RULE_06_1_H_NET_QTY_FONT",
+      "citation": "Rule 6(1)(h) read with Table-I, G.S.R. 629(E)",
+      "deficit": "Deficit 0.66 mm (measured 1.84 mm vs required 2.50 mm for 144 cm2 PDP)"
+    },
+    {
+      "rule_code": "SECTION_11_RULE_12_PROHIBITED_UNITS",
+      "citation": "Section 11 LM Act 2009 read with Rule 12 LMPC Rules 2011",
+      "deficit": "Non-standard unit 'gms' used instead of standard SI unit 'g'"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "description": "DEMO FIXTURE: Large bulk container > 2500 cm2 verifying corrected Row 5 statutory 6.0 mm threshold (ADL-01 / TS-UNIT-08)",
+  "pdp_area_cm2": 2800.0,
+  "container_type": "BLOWN_MOULDED",
+  "measured_font_height_mm": 6.20,
+  "statutory_min_mm": 6.00,
+  "gazette_citation": "Table-I Row 5, G.S.R. 629(E) dated 23.06.2017",
+  "expected_verdict": "PASS"
+}

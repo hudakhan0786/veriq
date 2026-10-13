@@ -1,0 +1,10 @@
+{
+  "description": "DEMO FIXTURE: Compliant package where 2.80 mm font height exceeds 2.50 mm requirement for 144 cm2 PDP (TS-UNIT-06)",
+  "pdp_area_cm2": 144.0,
+  "measured_font_height_mm": 2.80,
+  "net_quantity": 200.0,
+  "mrp": 80.0,
+  "declared_usp": 0.40,
+  "mfg_date": "2023-05-15",
+  "expected_verdict": "PASS"
+}

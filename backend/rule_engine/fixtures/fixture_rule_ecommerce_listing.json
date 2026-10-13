@@ -1,0 +1,19 @@
+{
+  "description": "DEMO FIXTURE: E-commerce listing complying with Rule 6(10) - Country of origin present, manufacturing date statutorily exempt (TS-UNIT-12, TS-UNIT-13)",
+  "platform": "Amazon.in",
+  "product_name": "Organic Green Tea 100g",
+  "mrp": 150.0,
+  "tax_inclusive": true,
+  "net_quantity_magnitude": 100.0,
+  "net_quantity_unit": "g",
+  "has_banned_unit": false,
+  "manufacturer_name": "Himalayan Herbs Ltd",
+  "manufacturer_address": "Estate No. 5, Dehradun, Uttarakhand 248001",
+  "consumer_care_phone": "1800-111-2222",
+  "consumer_care_email": "care@himalayanherbs.in",
+  "consumer_care_address": "Estate No. 5, Dehradun, Uttarakhand 248001",
+  "country_of_origin": "India",
+  "mfg_date": null,
+  "expected_verdict": "PASS"
+}
+

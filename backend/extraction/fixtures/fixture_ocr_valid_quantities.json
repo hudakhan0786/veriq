@@ -1,0 +1,30 @@
+{
+  "description": "DEMO FIXTURE: Fully compliant net quantity and USP declarations (TS-UNIT-03, TS-UNIT-04)",
+  "image_id": "img_valid_qty_03",
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "Net Quantity: 500 g",
+      "confidence": 0.991,
+      "language": "en",
+      "polygon": [[100, 200], [420, 200], [420, 250], [100, 250]],
+      "bounding_box": [200, 100, 250, 420]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "MRP Rs. 200.00 (incl. of all taxes)",
+      "confidence": 0.994,
+      "language": "en",
+      "polygon": [[100, 260], [560, 260], [560, 310], [100, 310]],
+      "bounding_box": [260, 100, 310, 560]
+    },
+    {
+      "token_id": "tok_03",
+      "text": "Unit Sale Price: Rs. 0.40 / g",
+      "confidence": 0.978,
+      "language": "en",
+      "polygon": [[100, 320], [480, 320], [480, 370], [100, 370]],
+      "bounding_box": [320, 100, 370, 480]
+    }
+  ]
+}

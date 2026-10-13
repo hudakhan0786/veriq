@@ -1,0 +1,66 @@
+{
+  "description": "DEMO FIXTURE: Fully compliant packaged commodity with all Rule 6 statutory declarations",
+  "image_id": "img_compliant_pack_05",
+  "total_tokens": 7,
+  "mean_confidence": 0.985,
+  "execution_time_ms": 42,
+  "tokens": [
+    {
+      "token_id": "tok_01",
+      "text": "Net Quantity: 400 g",
+      "confidence": 0.992,
+      "language": "en",
+      "polygon": [[100, 100], [380, 100], [380, 140], [100, 140]],
+      "bounding_box": [100, 100, 140, 380]
+    },
+    {
+      "token_id": "tok_02",
+      "text": "MRP Rs. 150.00 (incl. of all taxes)",
+      "confidence": 0.995,
+      "language": "en",
+      "polygon": [[100, 150], [580, 150], [580, 190], [100, 190]],
+      "bounding_box": [150, 100, 190, 580]
+    },
+    {
+      "token_id": "tok_03",
+      "text": "Unit Sale Price: Rs. 0.375 / g",
+      "confidence": 0.988,
+      "language": "en",
+      "polygon": [[100, 200], [480, 200], [480, 240], [100, 240]],
+      "bounding_box": [200, 100, 240, 480]
+    },
+    {
+      "token_id": "tok_04",
+      "text": "Mfg Date: 04/2024  Exp Date: 04/2025",
+      "confidence": 0.982,
+      "language": "en",
+      "polygon": [[100, 250], [520, 250], [520, 290], [100, 290]],
+      "bounding_box": [250, 100, 290, 520]
+    },
+    {
+      "token_id": "tok_05",
+      "text": "Manufactured by: Parle Products Pvt. Ltd., Vile Parle East, Mumbai, Maharashtra 400057",
+      "confidence": 0.978,
+      "language": "en",
+      "polygon": [[100, 300], [920, 300], [920, 340], [100, 340]],
+      "bounding_box": [300, 100, 340, 920]
+    },
+    {
+      "token_id": "tok_06",
+      "text": "For complaints contact: Customer Care Executive, Address: Mumbai, Helpline: 1800-22-1234, Email: care@parle.biz",
+      "confidence": 0.975,
+      "language": "en",
+      "polygon": [[100, 350], [980, 350], [980, 390], [100, 390]],
+      "bounding_box": [350, 100, 390, 980]
+    },
+    {
+      "token_id": "tok_07",
+      "text": "Country of Origin: India",
+      "confidence": 0.990,
+      "language": "en",
+      "polygon": [[100, 400], [420, 400], [420, 440], [100, 440]],
+      "bounding_box": [400, 100, 440, 420]
+    }
+  ],
+  "full_text": "Net Quantity: 400 g\nMRP Rs. 150.00 (incl. of all taxes)\nUnit Sale Price: Rs. 0.375 / g\nMfg Date: 04/2024  Exp Date: 04/2025\nManufactured by: Parle Products Pvt. Ltd., Vile Parle East, Mumbai, Maharashtra 400057\nFor complaints contact: Customer Care Executive, Address: Mumbai, Helpline: 1800-22-1234, Email: care@parle.biz\nCountry of Origin: India"
+}

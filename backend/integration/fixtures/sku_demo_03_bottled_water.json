@@ -1,0 +1,72 @@
+{
+  "sku_id": "SKU-DEMO-03",
+  "product_name": "Natural Mineral Water 1L",
+  "category": "BEVERAGES",
+  "packaging_type": "CYLINDRICAL",
+  "demonstration_point": "Fully compliant standard packaging (GSR 779 USP compliant, valid font, complete declarations)",
+  "expected_overall_verdict": "PASS",
+  "pdp_area_cm2": 240.0,
+  "raw_image_mock": {
+    "filename": "sku_demo_03_water.jpg",
+    "sha256": "c5f7a3d4e6f8091234567890abcdef0123456789abcdef0123456789abcdef03"
+  },
+  "quality_gate": {
+    "passed": true,
+    "blur_variance": 420.5,
+    "glare_percentage": 0.6,
+    "skew_angle_deg": 0.8
+  },
+  "calibration": {
+    "method": "ARUCO_4X4_50",
+    "px_to_mm": 13.20,
+    "confidence": 0.99,
+    "reference_bounding_box": [78, 78, 242, 242]
+  },
+  "extracted_entities": {
+    "brand_name": {
+      "text": "Alkaline 88",
+      "bounding_box": [380, 950, 610, 1080]
+    },
+    "net_quantity": {
+      "magnitude": 1.0,
+      "unit": "L",
+      "has_banned_unit": false,
+      "bounding_box": [620, 950, 675, 1120]
+    },
+    "mrp": {
+      "amount": 20.0,
+      "currency": "INR",
+      "tax_inclusive": true,
+      "bounding_box": [680, 950, 710, 1120]
+    },
+    "declared_usp": 20.0,
+    "declared_usp_entity": {
+      "price_per_unit": 20.0,
+      "unit": "L",
+      "bounding_box": [710, 950, 740, 1120]
+    },
+    "manufacturer": {
+      "name": "Aqua Pure Beverages Pvt. Ltd.",
+      "address": "Plot 42, Industrial Area Phase-II, Haridwar 249403, Uttarakhand, India",
+      "address_line": "Plot 42, Industrial Area Phase-II, Haridwar 249403, Uttarakhand, India",
+      "pin_code": "249403",
+      "state": "Uttarakhand",
+      "source": "SYNTHETIC — Demo fixture for fully-compliant packaging",
+      "bounding_box": [380, 1100, 560, 1160]
+    },
+    "measured_font_height_mm": 3.10,
+    "consumer_care": {
+      "has_email": true,
+      "has_phone": true,
+      "has_address": true,
+      "is_complete": true,
+      "bounding_box": [610, 1100, 670, 1160]
+    },
+    "country_of_origin": "India",
+    "country_of_origin_entity": {
+      "country": "India",
+      "bounding_box": [560, 1100, 610, 1160]
+    }
+  },
+  "expected_violations": []
+}
